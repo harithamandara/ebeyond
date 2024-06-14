@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Theater</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.jpg" alt="Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">OUR SCREENS</a></li>
+                <li><a href="#">SCHEDULE</a></li>
+                <li><a href="#">MOVIE LIBRARY</a></li>
+                <li><a href="#">LOCATION & CONTACT</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="menu-overlay" id="menu-overlay">
+        <div class="close-btn" onclick="toggleMenu()">X</div>
+        <ul class="overlay-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">OUR SCREENS</a></li>
+            <li><a href="#">SCHEDULE</a></li>
+            <li><a href="#">MOVIE LIBRARY</a></li>
+            <li><a href="#">LOCATION & CONTACT</a></li>
+        </ul>
+    </div>
+    <main>
+        <section class="hero">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="assets/banner.avif" alt="Movie Theater 1" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/banner4.webp" alt="Movie Theater 2" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/banner7.jpeg" alt="Movie Theater 3" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="assets/banner8.webp" alt="Movie Theater 3" style="width:100%">
+              </div>
+          </div>
+        </section>
+        <section class="content">
+          <h1>Movie Library</h1>
+          <p>Discover an extensive collection of movies from all genres and eras. Stream your favorites, explore new releases, and enjoy curated recommendations. Your ultimate movie destination awaits!</p>
+        </section>
+      </main>
+      
+
+
+  <section class="favorites-section">
+    <div class="search-container"></div>
+    <h2>Collect your favourites</h2>
+    <hr>
+    
+    <i class="fa fa-search"></i>
+    <input type="text" id="search-input" placeholder="Search title and add to grid">
+    </div>
+    <div class="grid-container">
+        <div class="grid-item" data-title="Batman Returns">
+            <img src="assets/batman.jpg" alt="Batman Returns">
+            <div class="grid-content">
+                <h3>Batman Returns</h3>
+                <p>Immerse yourself in the dark and thrilling world of Gotham City with 'Batman.' Follow the iconic Caped Crusader as he battles the sinister forces threatening his city. With a brooding atmosphere, complex characters, and stunning visuals, 'Batman' delivers an unforgettable cinematic experience that explores themes of justice, vengeance, and heroism.</p>
+                <button class="close-btn2">&times;</button>
+            </div>
+        </div>
+        <div class="grid-item" data-title="Wild Wild West">
+            <img src="assets/wild.jpg" alt="Wild Wild West">
+            <div class="grid-content">
+                <h3>Wild Wild West</h3>
+                <p>Step into the wild and adventurous world of 'Wild Wild West.' Set in an alternate 19th-century America, this action-packed film follows two special agents on a mission to stop a diabolical plot. With a mix of steampunk technology, witty banter, and thrilling showdowns, 'Wild Wild West' offers a unique and entertaining ride through the untamed frontier.</p>
+                <button class="close-btn2">&times;</button>
+            </div>
+        </div>
+        <div class="grid-item" data-title="The Amazing Spiderman">
+            <img src="assets/spiderman.jpg" alt="The Amazing Spiderman">
+            <div class="grid-content">
+                <h3>The Amazing Spiderman</h3>
+                <p>Swing into action with 'Spiderman,' the story of Peter Parker, a high school student who gains incredible spider-like abilities. Balancing his new superhero responsibilities with everyday life, Spiderman faces off against formidable villains in this thrilling and heartwarming adventure. Witness the journey of a relatable hero who embodies courage, responsibility, and resilience.</p>
+                <button class="close-btn2">&times;</button>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<section class="tv-shows-section">
+    <h2>Popular TV Shows</h2>
+    <hr>
+    <div class="tv-grid-container" id="tv-grid-container">
+        <!-- TV Shows will be inserted here dynamically -->
+    </div>
+</section>
+
+
+
+<section class="contact-section">
+  <div class="contact-form">
+      <h2>How to reach us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <form id="contact-form" action="form-handler.php" method="POST">
+        <div class="form-group name-group">
+          <div class="name-field">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first-name" required>
+          </div>
+          <div class="name-field">
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last-name" required>
+          </div>
+        </div>
+          <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+              <label for="telephone">Telephone</label>
+              <input type="tel" id="telephone" name="telephone">
+          </div>
+          <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message"></textarea>
+          </div>
+        
+          <input type="checkbox" id="terms" name="terms" required>     I agree to the <a href="#">Terms & Conditions</a></P>
+              
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">SUBMIT</button>
+        </div>
+      </form>
+  </div>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.3807403172596!2d79.940426!3d6.8448775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25069caa2f53b%3A0xe7eae3a8b1f1214d!2seBEYONDS%20eBusiness%20%26%20Digital%20Solutions!5e0!3m2!1sen!2slk!4v1718305224818!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+      <div class="footer-info">
+          <p><strong>IT Group</strong></p>
+          <p>C. Salvador de Madariaga, 1</p>
+          <p>28027 Madrid</p>
+          <p>Spain</p>
+      </div>
+      <div class="footer-social">
+          <p>Follow us on</p>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>Copyright © 2022 IT Hotels. All rights reserved.</p>
+      <p>Photos by <a href="https://unsplash.com/@felixmooneeram">Felix Mooneeram</a> & <a href="https://unsplash.com/@serge_k">Serge Kutuzov</a> on <a href="https://unsplash.com">Unsplash</a></p>
+  </div>
+</footer>
+    <script src="script.js"></script>
+
+    <script>
+       
+        </script>
+</body>
+</html>
